@@ -13,7 +13,7 @@ import Admin from "../components/Admin"
 
 function App() {
 	return (
-		<main className="container mt-5 mb-5">
+		<main className="container pt-5 pb-5">
 			<Router>
 				<Navbar />
 				<Routes>
