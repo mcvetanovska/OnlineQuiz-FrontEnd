@@ -25,7 +25,7 @@ export const getAllQuestions = async() =>{
 
 export const fetchQuizForUser = async(number, subject) => {
     try {
-        const response = await api.get(`/quiz/fetch-quiz-for-user?numOfQuestions=${number}&subject=${subject}`)
+        const response = await api.get(`/quiz/fetch-questions-for-user?numOfQuestions=${number}&subject=${subject}`)
         return response.data
     } catch (error) {
         console.error(error)

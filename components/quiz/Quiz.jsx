@@ -28,9 +28,7 @@ const Quiz = () => {
 	const handleAnswerChange = (questionId, answer) => {
 		setSelectedAnswers((prevAnswers) => {
 			const existingAnswerIndex = prevAnswers.findIndex((answerObj) => answerObj.id === questionId)
-			const selectedAnswer = Array.isArray(answer)
-				? answer.map((a) => a.charAt(0))
-				: answer.charAt(0)
+			const selectedAnswer = answer;
 
 			if (existingAnswerIndex !== -1) {
 				const updatedAnswers = [...prevAnswers]

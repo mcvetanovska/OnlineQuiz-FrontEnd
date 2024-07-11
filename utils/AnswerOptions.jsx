@@ -1,18 +1,21 @@
 import React from "react"
 
 const AnswerOptions = ({ question, isChecked, handleAnswerChange, handleCheckboxChange }) => {
+	console.log("question:", question);
+	
 	if (!question) {
 		return (
 			<div>
-				No questions available, <br /> you may try agian by reducing your requested number of
+				No questions available, <br /> you may try again by reducing your requested number of
 				questions on this topic
 			</div>
 		)
 	}
 
 	const { id, questionType, choices } = question
+	console.log("choices:", choices);
 
-	if (questionType === "single") {
+	if (questionType === "single-choice") {
 		return (
 			<div>
 				{choices.sort().map((choice, index) => (
@@ -33,7 +36,7 @@ const AnswerOptions = ({ question, isChecked, handleAnswerChange, handleCheckbox
 				))}
 			</div>
 		)
-	} else if (questionType === "multiple") {
+	} else if (questionType === "multiple-choice") {
 		return (
 			<div>
 				{choices.sort().map((choice, index) => (
