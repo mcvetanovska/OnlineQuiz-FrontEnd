@@ -66,7 +66,7 @@ const UpdateQuestion = () => {
 	}
 
 	return (
-		<div className="container">
+		<div className="container card">
 			<h4 className="mt-5" style={{ color: "GrayText" }}>
 				Update Quiz Question
 			</h4>

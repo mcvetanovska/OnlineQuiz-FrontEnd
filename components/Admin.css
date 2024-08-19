@@ -1,0 +1,13 @@
+.admin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    flex-direction: column;
+    top: -200px;
+  }
+
+  .welcome{
+    color: #54b4d3;
+  }
