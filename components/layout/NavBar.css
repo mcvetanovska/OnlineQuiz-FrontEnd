@@ -1,0 +1,41 @@
+.header {
+  padding: 15px 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  z-index: 1000;
+  position: relative;
+}
+
+.inside {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #54b4d3;
+}
+
+.logo-img {
+  width: 50px;
+  margin: 5px;
+}
+
+.nav a {
+  margin: 0 10px;
+  color: #006064;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.download-btn {
+  padding: 10px 20px;
+  background-color: #006064;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}

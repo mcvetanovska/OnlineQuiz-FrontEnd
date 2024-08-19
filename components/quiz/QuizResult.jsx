@@ -1,5 +1,6 @@
 import React from "react"
 import { useLocation} from "react-router-dom"
+import "./QuizResult.css"
 
  const QuizResult = () => {
 		const location = useLocation()
@@ -12,7 +13,8 @@ import { useLocation} from "react-router-dom"
 		}
 
 		return (
-			<section className="container mt-5">
+			<section className="container mt-5 results-container">
+				<div className="card">
 				<h3>Your Quiz Result Summary</h3>
 				<hr />
 				<h5 className="text-info">
@@ -20,9 +22,10 @@ import { useLocation} from "react-router-dom"
 				</h5>
 				<p>Your total score is {percentage}%.</p>
 
-				<button className="btn btn-primary btn-sm" onClick={handleRetakeQuiz}>
+				<button className="nav-button" onClick={handleRetakeQuiz}>
 					Retake this quiz
 				</button>
+				</div>
 			</section>
 		)
  }

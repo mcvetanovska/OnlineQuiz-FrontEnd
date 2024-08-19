@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { getSubjects } from "../../utils/QuizService"
+import "./QuizStepper.css"
 
  const QuizStepper = () => {
 		const [currentStep, setCurrentStep] = useState(1)
@@ -91,39 +92,20 @@ import { getSubjects } from "../../utils/QuizService"
 			}
 		}
 
-		const renderProgressBar = () => {
-			const progress = currentStep === 3 ? 100 : ((currentStep - 1) / 2) * 100
-			return (
-				<div className="progress">
-					<div
-						className="progress-bar"
-						role="progressbar"
-						style={{ width: `${progress}%` }}
-						aria-valuenow={progress}>
-						Step {currentStep}
-					</div>
-				</div>
-			)
-		}
-
 		return (
-			<section className="mt-5">
-				<h3 style={{ color: "GrayText" }} className="mb-4">
-					Welcome to quiz online
-				</h3>
-				{renderProgressBar()}
+			<section className="mt-5 stepper-container">
 				<div className="card">
 					<div className="card-body">
 						{renderStepContent()}
 						<div className="d-flex justify-content-between mt-4">
 							{currentStep > 1 && (
-								<button className="btn btn-primary" onClick={handlePrevious}>
+								<button className="nav-button prev-button" onClick={handlePrevious}>
 									Previous
 								</button>
 							)}
 							{currentStep < 3 && (
 								<button
-									className="btn btn-primary"
+									className="nav-button next-button"
 									onClick={handleNext}
 									disabled={
 										(currentStep === 1 && !selectedSubject) ||
@@ -133,7 +115,7 @@ import { getSubjects } from "../../utils/QuizService"
 								</button>
 							)}
 							{currentStep === 3 && (
-								<button className="btn btn-success" onClick={handleNext}>
+								<button className="nav-button submit-button" onClick={handleNext}>
 									Start Quiz
 								</button>
 							)}

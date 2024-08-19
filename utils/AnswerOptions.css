@@ -1,0 +1,29 @@
+.answer-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.form-check {
+    background-color: #b2dfdb;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-check:hover {
+    background-color: #006064;
+}
+
+.selected {
+    background-color: #006064;
+    border-color: #006064;
+    color: white;
+    padding-left: 10px;
+    border-radius: 10px;
+}
