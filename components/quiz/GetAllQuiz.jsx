@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { deleteQuestion, getAllQuestions } from "../../utils/QuizService"
 import { Link } from "react-router-dom"
 import {FaPlus} from "react-icons/fa"
+import "./GetAllQuiz.css"
 
 const GetAllQuiz = () => {
 	const [questions, setQuestions] = useState([
@@ -45,6 +46,7 @@ const GetAllQuiz = () => {
 
 	return (
 		<section className="container">
+			<div className="allquiz-card">
 			<div className="row mt-5">
 				<div className="col-md-6 mb-2 md-mb-0" style={{ color: "GrayText" }}>
 					<h4>All Quiz Questions</h4>
@@ -58,11 +60,12 @@ const GetAllQuiz = () => {
 			<hr />
 			{isQuestionDeleted && <div className="alert alert-success">{deleteSuccess}</div>}
 			{questions.map((question, index) => (
-				<div key={question.id}>
+				<div key={question.id} className="quest">
 					<pre>
 						<h4 style={{ color: "GrayText" }}>{`${index + 1}. ${question.question}`}</h4>
 					</pre>
-					<ul>
+					<hr style={{ color: "GrayText" }}/>
+					<ul style={{ color: "GrayText" }}>
 						{question.choices.map((choice, index) => (
 							<li key={index}>{choice}</li>
 						))}
@@ -80,6 +83,7 @@ const GetAllQuiz = () => {
 					</div>
 				</div>
 			))}
+			</div>
 		</section>
 	)
 }

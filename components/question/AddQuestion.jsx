@@ -95,7 +95,7 @@ const AddQuestion = () => {
 				<div className="col-md-6  mt-5">
 					<div className="card">
 						<div className="card-header">
-							<h5 className="card-title">Add New Questions</h5>
+							<h4 className="card-title" style={{ color: "GrayText" }}>Add New Questions</h4>
 						</div>
 						<div className="card-body">
 							<form onSubmit={handleSubmit} className="p-2">
@@ -162,7 +162,7 @@ const AddQuestion = () => {
 									</select>
 								</div>
 								<div className="mb-3">
-									<label htmlFor="choices" className="form-label text-primary">
+									<label htmlFor="choices" className="text-info">
 										Choices
 									</label>
 									{choices.map((choice, index) => (
@@ -190,7 +190,7 @@ const AddQuestion = () => {
 								</div>
 								{questionType === "single" && (
 									<div className="mb-3">
-										<label htmlFor="answer" className="form-label text-success">
+										<label htmlFor="answer" className="text-info">
 											Correct Answer
 										</label>
 										<input
@@ -204,7 +204,7 @@ const AddQuestion = () => {
 								)}
 								{questionType === "multiple" && (
 									<div className="mb-3">
-										<label htmlFor="answer" className="form-label text-success">
+										<label htmlFor="answer" className="text-info">
 											Correct Answer(s)
 										</label>
 										{correctAnswers.map((answer, index) => (
@@ -241,7 +241,7 @@ const AddQuestion = () => {
 										Save Question
 									</button>
 									<Link to={"/all-quizzes"} className="btn btn-outline-primary ml-2">
-										Back to existing questions
+									Back to all questions
 									</Link>
 								</div>
 							</form>
