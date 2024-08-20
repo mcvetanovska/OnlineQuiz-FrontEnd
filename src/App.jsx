@@ -14,7 +14,7 @@ import BackgroundQuiz from "../components/BackgroundQuiz"
 
 function App() {
 	return (
-		<main className="container pt-5 pb-5 w-100 h-100">
+		<main className="container pt-5 pb-5">
 			<Router>
 				<Navbar />
 				<Routes>

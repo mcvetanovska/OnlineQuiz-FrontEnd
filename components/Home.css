@@ -1,63 +1,69 @@
-body{
-    background-color: #e0f7fa;
+body {
+  background-color: #e0f7fa;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow-x: hidden; 
 }
 
 .homepage {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%; /* Ensure the container takes up at least the full height */
-    position: relative;
-  }
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; 
+  position: relative;
+  padding: 0 50px; 
+  overflow: visible; 
+}
 
-  .svg-container {
-    position: absolute;
-    left: 600px;
-    width: 70%; 
-    height: 70%; 
-    z-index: -1;
-    display: flex;
-    align-items: center;
-  }
-  
-  .blob-svg {
-    position: absolute;
-    width: 150%; 
-    height: 200%;
-    z-index: 0; 
-    left: -300px;
-    top: -250px;
-  }
-  
-  .bottom-right-svg {
-    position: relative;
-    width: 100%; 
-    height: auto;
-    z-index: 1;
-  }
-  .main-content {
-    position: absolute;
-    flex: 1; 
-    max-width: 60%;
-    left: -150px;
-    top: 400px;
-  }
-  
-  .main-content h1 {
-    font-size: 120px;
-    color: #006064;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .main-content p {
-    font-size: 25px;
-    color: #00796b;
-    font-family: "Urbanist", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
+.main-content {
+  flex: 0 0 65%; 
+  margin-left: -200px; 
+  margin-top: 200px; 
+  z-index: 2; 
+}
+
+.main-content h1 {
+  font-size: 120px;
+  color: #006064;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-content p {
+  font-size: 25px;
+  color: #00796b;
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.svg-container {
+  flex: 0 0 70%; 
+  position: relative;
+  margin-right: -250px; 
+  margin-top: -50px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.blob-svg {
+  position: absolute;
+  width: 150%; 
+  height: 200%;
+  left: -250px; 
+  top: -300px;
+  z-index: 0; 
+}
+
+.bottom-right-svg {
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
