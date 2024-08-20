@@ -1,0 +1,15 @@
+.allquiz-card {
+    background-color: #ffffff;
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+  }
+
+  .row{
+    justify-content: space-between;
+  }
+
+  .quest{
+    margin-bottom: 20px;
+  }

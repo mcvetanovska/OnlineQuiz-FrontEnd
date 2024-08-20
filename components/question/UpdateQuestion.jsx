@@ -66,12 +66,17 @@ const UpdateQuestion = () => {
 	}
 
 	return (
-		<div className="container card">
-			<h4 className="mt-5" style={{ color: "GrayText" }}>
+		<div className="container">
+			<div className="row justify-content-center">
+				<div className="col-md-6  mt-5">
+					<div className="card">
+						<div className="card-header">
+			<h4 className="card-title" style={{ color: "GrayText" }}>
 				Update Quiz Question
 			</h4>
-			<div className="col-8">
-				<form onSubmit={handleUpdate}>
+			</div>
+			<div className="card-body">
+				<form onSubmit={handleUpdate} className="p-2">
 					<div className="form-group">
 						<label className="text-info">Question:</label>
 						<textarea
@@ -104,7 +109,7 @@ const UpdateQuestion = () => {
 					</div>
 
 					<div className="btn-group">
-						<button type="submit" className="btn btn-sm btn-outline-warning">
+						<button type="submit" className="btn btn-outline-warning">
 							Update question
 						</button>
 						<Link to={"/all-quizzes"} className="btn btn-outline-primary ml-2">
@@ -112,6 +117,9 @@ const UpdateQuestion = () => {
 						</Link>
 					</div>
 				</form>
+			</div>
+			</div>
+			</div>
 			</div>
 		</div>
 	)
